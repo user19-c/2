@@ -12,12 +12,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- NAVIGATION LOGIC ---
     function showSection(sectionToShow) {
-        // Hide all sections
+        // Hide all sections by adding 'hidden' and removing 'active'
         landingPage.classList.remove('active');
-        giftPage.classList.remove('active');
-        memoriesPage.classList.remove('active');
+        landingPage.classList.add('hidden');
 
-        // Show requested section
+        giftPage.classList.remove('active');
+        giftPage.classList.add('hidden');
+
+        memoriesPage.classList.remove('active');
+        memoriesPage.classList.add('hidden');
+
+        // Show requested section by removing 'hidden' and adding 'active'
+        sectionToShow.classList.remove('hidden');
         sectionToShow.classList.add('active');
     }
 
