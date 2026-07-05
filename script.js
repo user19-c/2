@@ -93,10 +93,11 @@ document.addEventListener('DOMContentLoaded', () => {
     polaroids.forEach(polaroid => {
         polaroid.addEventListener('click', () => {
             const imgSrc = polaroid.querySelector('img').src;
-            const textContent = polaroid.querySelector('.memory-caption').innerText;
+            // Use textContent instead of innerText because the element is hidden (display: none)
+            const textContent = polaroid.querySelector('.memory-caption').textContent;
 
             modalImg.src = imgSrc;
-            modalText.innerText = textContent;
+            modalText.textContent = textContent;
 
             memoryModal.classList.remove('hidden');
         });
