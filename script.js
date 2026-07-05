@@ -28,6 +28,17 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.addEventListener('click', () => showSection(landingPage));
     });
 
+    // --- CONFETTI LOGIC ---
+    function fireConfetti() {
+        if (typeof confetti === 'function') {
+            confetti({
+                particleCount: 100,
+                spread: 70,
+                origin: { y: 0.6 }
+            });
+        }
+    }
+
     // ==========================================
     // GIFT PAGE LOGIC
     // ==========================================
@@ -43,6 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function openGift() {
         giftPrompt.classList.add('hidden');
         cakeSection.classList.remove('hidden');
+        fireConfetti();
     }
 
     btnGiftYes.addEventListener('click', openGift);
@@ -55,6 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
     btnBlowCandles.addEventListener('click', () => {
         cakeSection.classList.add('hidden');
         videoSection.classList.remove('hidden');
+        fireConfetti();
 
         // Autoplay the iframe video if possible by appending autoplay=1
         const iframe = document.getElementById('youtube-video');
