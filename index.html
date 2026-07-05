@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- SECTION 1: LANDING PAGE -->
+    <div id="landing-page" class="section active">
+        <h1 class="cursive-header">Happy Birthday!</h1>
+        <!-- EDIT YOUR MAIN MESSAGE HERE -->
+        <p class="main-message">Wishing you the most wonderful birthday filled with joy, laughter, and everything beautiful. You deserve the world!</p>
+
+        <div class="button-group">
+            <button id="btn-open-gift" class="primary-btn">🎁 Open Gift</button>
+            <button id="btn-memories" class="primary-btn">📸 Memories</button>
+        </div>
+    </div>
+
+    <!-- SECTION 2: GIFT PAGE -->
+    <div id="gift-page" class="section">
+        <h1 class="cursive-header">A Special Gift For You</h1>
+
+        <div id="gift-prompt">
+            <p>Do you want to open the gift?</p>
+            <div class="button-group">
+                <button id="btn-gift-yes" class="secondary-btn">Yes</button>
+                <button id="btn-gift-no" class="secondary-btn">No</button>
+            </div>
+        </div>
+
+        <div id="cake-section" class="hidden">
+            <div class="cake-emoji">🎂</div>
+            <button id="btn-blow-candles" class="primary-btn">🌬️ Blow out candles</button>
+        </div>
+
+        <div id="video-section" class="hidden">
+            <!-- EDIT YOUTUBE VIDEO ID HERE (Replace 'dQw4w9WgXcQ' with your video ID) -->
+            <div class="video-container">
+                <iframe id="youtube-video" width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <button class="btn-back">⬅️ Back to Home</button>
+    </div>
+
+    <!-- SECTION 3: MEMORIES PAGE -->
+    <div id="memories-page" class="section">
+        <h1 class="cursive-header">Our Beautiful Memories</h1>
+
+        <div class="polaroid-grid">
+            <!-- Memory 1 -->
+            <div class="polaroid" data-id="1">
+                <img src="pic1.jpg" alt="Memory 1">
+                <!-- EDIT TEXT FOR PIC 1 HERE -->
+                <p class="memory-caption hidden-data">This is a beautiful memory we shared together. Such a fun day!</p>
+            </div>
+            <!-- Memory 2 -->
+            <div class="polaroid" data-id="2">
+                <img src="pic2.jpg" alt="Memory 2">
+                <!-- EDIT TEXT FOR PIC 2 HERE -->
+                <p class="memory-caption hidden-data">I will never forget this moment. Pure happiness.</p>
+            </div>
+            <!-- Memory 3 -->
+            <div class="polaroid" data-id="3">
+                <img src="pic3.jpg" alt="Memory 3">
+                <!-- EDIT TEXT FOR PIC 3 HERE -->
+                <p class="memory-caption hidden-data">Looking amazing as always in this picture.</p>
+            </div>
+            <!-- Memory 4 -->
+            <div class="polaroid" data-id="4">
+                <img src="pic4.jpg" alt="Memory 4">
+                <!-- EDIT TEXT FOR PIC 4 HERE -->
+                <p class="memory-caption hidden-data">One of the best trips we ever took!</p>
+            </div>
+            <!-- Memory 5 -->
+            <div class="polaroid" data-id="5">
+                <img src="pic5.jpg" alt="Memory 5">
+                <!-- EDIT TEXT FOR PIC 5 HERE -->
+                <p class="memory-caption hidden-data">Laughing until our stomachs hurt.</p>
+            </div>
+            <!-- Memory 6 -->
+            <div class="polaroid" data-id="6">
+                <img src="pic6.jpg" alt="Memory 6">
+                <!-- EDIT TEXT FOR PIC 6 HERE -->
+                <p class="memory-caption hidden-data">A very special celebration.</p>
+            </div>
+            <!-- Memory 7 -->
+            <div class="polaroid" data-id="7">
+                <img src="pic7.jpg" alt="Memory 7">
+                <!-- EDIT TEXT FOR PIC 7 HERE -->
+                <p class="memory-caption hidden-data">Just us being our goofy selves.</p>
+            </div>
+            <!-- Memory 8 -->
+            <div class="polaroid" data-id="8">
+                <img src="pic8.jpg" alt="Memory 8">
+                <!-- EDIT TEXT FOR PIC 8 HERE -->
+                <p class="memory-caption hidden-data">Such a peaceful and lovely day.</p>
+            </div>
+            <!-- Memory 9 -->
+            <div class="polaroid" data-id="9">
+                <img src="pic9.jpg" alt="Memory 9">
+                <!-- EDIT TEXT FOR PIC 9 HERE -->
+                <p class="memory-caption hidden-data">I love your smile in this one.</p>
+            </div>
+            <!-- Memory 10 -->
+            <div class="polaroid" data-id="10">
+                <img src="pic10.jpg" alt="Memory 10">
+                <!-- EDIT TEXT FOR PIC 10 HERE -->
+                <p class="memory-caption hidden-data">Here is to many more memories together!</p>
+            </div>
+        </div>
+
+        <button class="btn-back">⬅️ Back to Home</button>
+    </div>
+
+    <!-- MODAL FOR MEMORIES -->
+    <div id="memory-modal" class="modal hidden">
+        <div class="modal-content">
+            <span id="close-modal" class="close-btn">&times;</span>
+            <img id="modal-img" src="" alt="Expanded Memory">
+            <p id="modal-text" class="modal-caption"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
